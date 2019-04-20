@@ -21,7 +21,8 @@ RUN cd tmp \
     && rm -r /tmp/Runtime_ESBSE \
     && rm -r /tmp/Studio \
     && mkdir -p /opt/trun/data /opt/trun/data/log \
-    && chown -R $USER.$USER /opt/trun
+    && chown -R $USER.$USER /opt/trun \
+    && chmod -R 777 /opt
  #  && echo org.ops4j.pax.url.mvn.defaultRepositories = file:///opt/maven/repository@id=local.app@snapshots  >> /opt/trun/etc/org.ops4j.pax.url.mvn.cfg
 
 EXPOSE 1099 8101 44444 8040 9001
